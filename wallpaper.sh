@@ -5,7 +5,7 @@ BACKGROUND_DIR="$HOME/Pictures/wallpapers/current"
 
 
 set-bg(){
-    gsettings set org.gnome.desktop.background picture-uri "$1"
+    gsettings set org.gnome.desktop.background picture-uri "file://$1"
 }
 
 next-bg(){
