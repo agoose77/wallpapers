@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-
-
-BACKGROUND_DIR="$HOME/Pictures/wallpapers/current"
-
+THIS_DIR=$(dirname $(realpath $0))
+BACKGROUND_DIR="${THIS_DIR}/current"
 
 set-bg(){
     gsettings set org.gnome.desktop.background picture-uri "file://$1"
