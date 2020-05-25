@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-THIS_DIR=$(dirname $(realpath $0))
+THIS_DIR=$(dirname $(realpath "$0"))
 BACKGROUND_DIR="${THIS_DIR}/current"
 
 set-bg(){
@@ -7,8 +7,7 @@ set-bg(){
 }
 
 next-bg(){
-    bgpath=$(ls "$BACKGROUND_DIR" | shuf -n 1);
-    set-bg "$BACKGROUND_DIR/$bgpath";
+    set-bg $(find -L "$BACKGROUND_DIR" -type f | shuf -n 1);
 }
 
 
